@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FerryLegacy
+namespace FerryLegacy.domain
 {
     public class TimeTable
     {
