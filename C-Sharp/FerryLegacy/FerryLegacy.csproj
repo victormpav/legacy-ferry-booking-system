@@ -44,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvailableCrossing.cs" />
     <Compile Include="Bookings.cs" />
+    <Compile Include="domain\AvailableCrossing.cs" />
     <Compile Include="domain\Booking.cs" />
     <Compile Include="Ferries.cs" />
     <Compile Include="Ferry.cs" />

@@ -1,6 +1,6 @@
 using System;
 
-namespace FerryLegacy
+namespace FerryLegacy.domain
 {
     public class AvailableCrossing
     {
