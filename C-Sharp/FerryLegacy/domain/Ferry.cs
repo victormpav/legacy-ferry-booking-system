@@ -1,4 +1,4 @@
-namespace FerryLegacy
+namespace FerryLegacy.domain
 {
     public class Ferry
     {
@@ -11,7 +11,7 @@ namespace FerryLegacy
 
         public Ferry()
         {
-            HomePortId = 1;
+            HomePortId = 1; //TODO check why the reason of this
         }
     }
 }
