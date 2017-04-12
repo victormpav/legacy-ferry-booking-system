@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FerryLegacy.domain;
 
 namespace FerryLegacy
 {
