@@ -1,4 +1,4 @@
-﻿namespace FerryLegacy
+﻿namespace FerryLegacy.domain
 {
     public class Port
     {

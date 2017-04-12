@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using FerryLegacy.domain;
 using ServiceStack;
 
 namespace FerryLegacy

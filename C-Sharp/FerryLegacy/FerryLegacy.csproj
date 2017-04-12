@@ -49,12 +49,12 @@
     <Compile Include="domain\Booking.cs" />
     <Compile Include="domain\Ferry.cs" />
     <Compile Include="domain\FerryJourney.cs" />
+    <Compile Include="domain\Port.cs" />
     <Compile Include="Ferries.cs" />
     <Compile Include="FerryAvailabilityService.cs" />
     <Compile Include="FerryManager.cs" />
     <Compile Include="FerryModule.cs" />
     <Compile Include="JourneyBookingService.cs" />
-    <Compile Include="Port.cs" />
     <Compile Include="PortManager.cs" />
     <Compile Include="PortModel.cs" />
     <Compile Include="Ports.cs" />
