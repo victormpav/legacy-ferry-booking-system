@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Bookings.cs" />
+    <Compile Include="DAO\Ferries.cs" />
     <Compile Include="DAO\IBookings.cs" />
+    <Compile Include="DAO\IFerries.cs" />
     <Compile Include="domain\AvailableCrossing.cs" />
     <Compile Include="domain\Booking.cs" />
     <Compile Include="domain\Ferry.cs" />
@@ -54,7 +56,6 @@
     <Compile Include="domain\TimeTable.cs" />
     <Compile Include="domain\TimeTableEntry.cs" />
     <Compile Include="domain\TimeTableViewModelRow.cs" />
-    <Compile Include="Ferries.cs" />
     <Compile Include="FerryAvailabilityService.cs" />
     <Compile Include="FerryManager.cs" />
     <Compile Include="FerryModule.cs" />

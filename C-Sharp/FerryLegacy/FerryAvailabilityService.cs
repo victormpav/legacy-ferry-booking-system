@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using FerryLegacy.domain;
+using FerryLegacy.DAO;
 
 namespace FerryLegacy
 {
     public class FerryAvailabilityService
     {
         private readonly Ports _ports;
-        private readonly Ferries _ferries;
+        private readonly IFerries _ferries;
         private readonly TimeTables _timeTables;
         private readonly PortManager _portManager;
 
-        public FerryAvailabilityService(Ports ports, Ferries ferries, TimeTables timeTables, PortManager portManager)
+        public FerryAvailabilityService(Ports ports, IFerries ferries, TimeTables timeTables, PortManager portManager)
         {
             _ports = ports;
             _ferries = ferries;

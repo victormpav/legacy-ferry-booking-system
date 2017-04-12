@@ -5,9 +5,9 @@ using System.Linq;
 using FerryLegacy.domain;
 using ServiceStack;
 
-namespace FerryLegacy
+namespace FerryLegacy.DAO
 {
-    public class Ferries
+    public class Ferries : IFerries
     {
         private readonly List<Ferry> _ferries = new List<Ferry>();
 
@@ -18,7 +18,7 @@ namespace FerryLegacy
            _ferries = reader.ReadToEnd().FromJson<IEnumerable<Ferry>>().ToList();
         }
 
-        public List<Ferry> All()
+        public List<Ferry> GetAll()
         {
             return _ferries;
         }
