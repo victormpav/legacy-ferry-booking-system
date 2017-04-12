@@ -1,6 +1,4 @@
-﻿using FerryLegacy.domain;
-
-namespace FerryLegacy
+﻿namespace FerryLegacy.domain
 {
     public class FerryJourney
     {

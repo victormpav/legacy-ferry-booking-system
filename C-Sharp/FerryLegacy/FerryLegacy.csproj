@@ -48,9 +48,9 @@
     <Compile Include="domain\AvailableCrossing.cs" />
     <Compile Include="domain\Booking.cs" />
     <Compile Include="domain\Ferry.cs" />
+    <Compile Include="domain\FerryJourney.cs" />
     <Compile Include="Ferries.cs" />
     <Compile Include="FerryAvailabilityService.cs" />
-    <Compile Include="FerryJourney.cs" />
     <Compile Include="FerryManager.cs" />
     <Compile Include="FerryModule.cs" />
     <Compile Include="JourneyBookingService.cs" />
