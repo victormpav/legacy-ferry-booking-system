@@ -1,4 +1,5 @@
 using System;
+using FerryLegacy.domain;
 
 namespace FerryLegacy
 {
