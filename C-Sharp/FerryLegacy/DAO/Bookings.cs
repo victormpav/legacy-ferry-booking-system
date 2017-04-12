@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using FerryLegacy.domain;
 
-namespace FerryLegacy
+namespace FerryLegacy.DAO
 {
     public class Bookings
     {
