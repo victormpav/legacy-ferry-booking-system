@@ -8,10 +8,10 @@ namespace FerryLegacy
     public class JourneyBookingService
     {
         private TimeTables _timeTables;
-        private Bookings _bookings;
+        private IBookings _bookings;
         private readonly FerryAvailabilityService _ferryService;
 
-        public JourneyBookingService(TimeTables timeTables, Bookings bookings, FerryAvailabilityService ferryService)
+        public JourneyBookingService(TimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
         {
             _timeTables = timeTables;
             _bookings = bookings;
@@ -28,7 +28,7 @@ namespace FerryLegacy
 
                 if (timetable.Id == journeyId)
                 {
-                    var bookings = _bookings.All().Where(x => x.JourneyId == journeyId);
+                    var bookings = _bookings.GetAll().Where(x => x.JourneyId == journeyId);
                     var seatsLeft = ferry.Passengers - bookings.Sum(x => x.Passengers);
                     return seatsLeft >= passengers;
                 }
@@ -38,12 +38,12 @@ namespace FerryLegacy
 
         public void Book(Booking booking)
         {
-            _bookings.Add(booking);
+            _bookings.Create(booking);
         }
 
         public IEnumerable<Booking> GetAllBookings()
         {
-            return _bookings.All();
+            return _bookings.GetAll();
         }
     }
 }

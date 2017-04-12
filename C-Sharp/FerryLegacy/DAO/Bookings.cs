@@ -3,16 +3,16 @@ using FerryLegacy.domain;
 
 namespace FerryLegacy.DAO
 {
-    public class Bookings
+    public class Bookings : IBookings
     {
         private readonly List<Booking> _bookings = new List<Booking>();
 
-        public void Add(Booking booking)
+        public void Create(Booking booking)
         {
             _bookings.Add(booking);
         }
 
-        public IEnumerable<Booking> All()
+        public IEnumerable<Booking> GetAll()
         {
             return _bookings;
         }

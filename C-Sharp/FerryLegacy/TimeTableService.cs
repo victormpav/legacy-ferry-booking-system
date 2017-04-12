@@ -9,10 +9,10 @@ namespace FerryLegacy
     public class TimeTableService
     {
         private readonly TimeTables _timeTables;
-        private readonly Bookings _bookings;
+        private readonly IBookings _bookings;
         private readonly FerryAvailabilityService _ferryService;
 
-        public TimeTableService(TimeTables timeTables, Bookings bookings, FerryAvailabilityService ferryService)
+        public TimeTableService(TimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
         {
             _timeTables = timeTables;
             _bookings = bookings;
@@ -65,7 +65,7 @@ namespace FerryLegacy
                 {
                     if (timetable.Time >= time)
                     {
-                        var bookings = _bookings.All().Where(x => x.JourneyId == timetable.Id);
+                        var bookings = _bookings.GetAll().Where(x => x.JourneyId == timetable.Id);
                         var seatsLeft = ferry.Passengers - bookings.Sum(x => x.Passengers);
                         if (seatsLeft > 0)
                         {

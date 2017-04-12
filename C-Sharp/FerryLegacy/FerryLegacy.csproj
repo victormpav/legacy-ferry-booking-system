@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\Bookings.cs" />
+    <Compile Include="DAO\IBookings.cs" />
     <Compile Include="domain\AvailableCrossing.cs" />
     <Compile Include="domain\Booking.cs" />
     <Compile Include="domain\Ferry.cs" />

@@ -17,7 +17,7 @@ namespace FerryLegacy
         {
             var timeTables = new TimeTables();
             var ferries = new Ferries();
-            var bookings = new Bookings();
+            IBookings bookings = new Bookings();
             _ports = new Ports();
             _ferryService = new FerryAvailabilityService(_ports, ferries, timeTables, new PortManager(_ports, ferries));
             _bookingService = new JourneyBookingService(timeTables, bookings, _ferryService);
