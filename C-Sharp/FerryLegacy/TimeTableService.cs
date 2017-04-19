@@ -8,11 +8,11 @@ namespace FerryLegacy
 {
     public class TimeTableService
     {
-        private readonly TimeTables _timeTables;
+        private readonly ITimeTables _timeTables;
         private readonly IBookings _bookings;
         private readonly FerryAvailabilityService _ferryService;
 
-        public TimeTableService(TimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
+        public TimeTableService(ITimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
         {
             _timeTables = timeTables;
             _bookings = bookings;
@@ -21,7 +21,7 @@ namespace FerryLegacy
 
         public List<TimeTableViewModelRow> GetTimeTable(List<Port> ports)
         {
-            var timetables = _timeTables.All();
+            var timetables = _timeTables.GetAll();
 
             var allEntries = timetables.SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();
             var rows = new List<TimeTableViewModelRow>();
@@ -51,7 +51,7 @@ namespace FerryLegacy
         public IEnumerable<AvailableCrossing> GetAvailableCrossings(TimeSpan time, int fromPort, int toPort)
         {
             var ports = new Ports().GetAll();
-            var timetables = _timeTables.All();
+            var timetables = _timeTables.GetAll();
 
             var allEntries = timetables.SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();
 

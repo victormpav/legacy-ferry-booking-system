@@ -10,10 +10,10 @@ namespace FerryLegacy
     {
         private readonly IPorts _ports;
         private readonly IFerries _ferries;
-        private readonly TimeTables _timeTables;
+        private readonly ITimeTables _timeTables;
         private readonly PortManager _portManager;
 
-        public FerryAvailabilityService(IPorts ports, IFerries ferries, TimeTables timeTables, PortManager portManager)
+        public FerryAvailabilityService(IPorts ports, IFerries ferries, ITimeTables timeTables, PortManager portManager)
         {
             _ports = ports;
             _ferries = ferries;
@@ -24,7 +24,7 @@ namespace FerryLegacy
         public Ferry NextFerryAvailableFrom(int portId, TimeSpan time)
         {
             var ports = _portManager.PortModels();
-            var allEntries = _timeTables.All().SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();
+            var allEntries = _timeTables.GetAll().SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();
 
             foreach (var entry in allEntries)
             {

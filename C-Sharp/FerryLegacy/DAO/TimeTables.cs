@@ -5,9 +5,9 @@ using System.Linq;
 using FerryLegacy.domain;
 using ServiceStack;
 
-namespace FerryLegacy
+namespace FerryLegacy.DAO
 {
-    public class TimeTables
+    public class TimeTables : ITimeTables
     {
         private readonly List<TimeTableEntry> _entries = new List<TimeTableEntry>();
 
@@ -17,7 +17,7 @@ namespace FerryLegacy
             _entries = reader.ReadToEnd().FromJson<List<TimeTableEntry>>();
         }
 
-        public List<TimeTable> All()
+        public List<TimeTable> GetAll()
         {
             var result = new List<TimeTable>();
             List<TimeTableEntry> timeTableEntries = _entries.Where(x => x.TimeTableId == 1).ToList();

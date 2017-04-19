@@ -15,7 +15,7 @@ namespace FerryLegacy
 
         private static void WireUp()
         {
-            var timeTables = new TimeTables();
+            ITimeTables timeTables = new TimeTables();
             IFerries ferries = new Ferries();
             IBookings bookings = new Bookings();
             _ports = new Ports();

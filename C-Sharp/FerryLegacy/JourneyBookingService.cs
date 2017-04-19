@@ -7,11 +7,11 @@ namespace FerryLegacy
 {
     public class JourneyBookingService
     {
-        private TimeTables _timeTables;
+        private ITimeTables _timeTables;
         private IBookings _bookings;
         private readonly FerryAvailabilityService _ferryService;
 
-        public JourneyBookingService(TimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
+        public JourneyBookingService(ITimeTables timeTables, IBookings bookings, FerryAvailabilityService ferryService)
         {
             _timeTables = timeTables;
             _bookings = bookings;
@@ -20,7 +20,7 @@ namespace FerryLegacy
 
         public bool CanBook(int journeyId, int passengers)
         {
-            var timetables = _timeTables.All();
+            var timetables = _timeTables.GetAll();
             var allEntries = timetables.SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();
             foreach (var timetable in allEntries)
             {
