@@ -8,12 +8,12 @@ namespace FerryLegacy
 {
     public class FerryAvailabilityService
     {
-        private readonly Ports _ports;
+        private readonly IPorts _ports;
         private readonly IFerries _ferries;
         private readonly TimeTables _timeTables;
         private readonly PortManager _portManager;
 
-        public FerryAvailabilityService(Ports ports, IFerries ferries, TimeTables timeTables, PortManager portManager)
+        public FerryAvailabilityService(IPorts ports, IFerries ferries, TimeTables timeTables, PortManager portManager)
         {
             _ports = ports;
             _ferries = ferries;

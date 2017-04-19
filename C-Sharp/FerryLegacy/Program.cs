@@ -10,7 +10,7 @@ namespace FerryLegacy
     {
         private static TimeTableService _timeTableService;
         private static JourneyBookingService _bookingService;
-        private static Ports _ports;
+        private static IPorts _ports;
         private static FerryAvailabilityService _ferryService;
 
         private static void WireUp()
@@ -44,7 +44,7 @@ namespace FerryLegacy
             Console.WriteLine("=======");
             Console.WriteLine("Ferry Time Table");
 
-            var ports = _ports.All();
+            var ports = _ports.GetAll();
             var timeTable = _timeTableService.GetTimeTable(ports);
 
             DisplayTimetable(ports, timeTable);
@@ -113,7 +113,7 @@ namespace FerryLegacy
             {
                 Console.WriteLine("Ports:");
                 Console.WriteLine("------");
-                foreach (var port in _ports.All())
+                foreach (var port in _ports.GetAll())
                 {
                     Console.WriteLine("{0} - {1}", port.Id, port.Name);
                 }

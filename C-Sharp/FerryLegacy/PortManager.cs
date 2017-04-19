@@ -7,10 +7,10 @@ namespace FerryLegacy
 {
     public class PortManager
     {
-        private readonly Ports _ports;
+        private readonly IPorts _ports;
         private readonly IFerries _ferries;
 
-        public PortManager(Ports ports, IFerries ferries)
+        public PortManager(IPorts ports, IFerries ferries)
         {
             _ports = ports;
             _ferries = ferries;
@@ -18,7 +18,7 @@ namespace FerryLegacy
 
         public List<PortModel> PortModels()
         {
-            var ports = _ports.All().Select(x => new PortModel(x)).ToList();
+            var ports = _ports.GetAll().Select(x => new PortModel(x)).ToList();
             foreach (var ferry in _ferries.GetAll())
             {
                 var port = ports.Single(x => x.Id == ferry.HomePortId);

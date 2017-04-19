@@ -50,7 +50,7 @@ namespace FerryLegacy
 
         public IEnumerable<AvailableCrossing> GetAvailableCrossings(TimeSpan time, int fromPort, int toPort)
         {
-            var ports = new Ports().All();
+            var ports = new Ports().GetAll();
             var timetables = _timeTables.All();
 
             var allEntries = timetables.SelectMany(x => x.Entries).OrderBy(x => x.Time).ToList();

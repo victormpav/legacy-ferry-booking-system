@@ -4,9 +4,9 @@ using System.IO;
 using FerryLegacy.domain;
 using ServiceStack;
 
-namespace FerryLegacy
+namespace FerryLegacy.DAO
 {
-    public class Ports
+    public class Ports : IPorts
     {
         private readonly List<Port> _ports = new List<Port>();
 
@@ -16,7 +16,7 @@ namespace FerryLegacy
             _ports = reader.ReadToEnd().FromJson<List<Port>>();
         }
 
-        public List<Port> All()
+        public List<Port> GetAll()
         {
             return _ports;
         }
