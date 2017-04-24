@@ -4,7 +4,7 @@ using System.Linq;
 using FerryLegacy.domain;
 using FerryLegacy.DAO;
 
-namespace FerryLegacy
+namespace FerryLegacy.Service
 {
     public class TimeTableService
     {

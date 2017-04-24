@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FerryLegacy.domain;
 
-namespace FerryLegacy
+namespace FerryLegacy.Service
 {
     public static class FerryManager
     {

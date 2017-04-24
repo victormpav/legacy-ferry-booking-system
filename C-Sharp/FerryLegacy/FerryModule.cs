@@ -1,5 +1,6 @@
 using System;
 using FerryLegacy.domain;
+using FerryLegacy.Service;
 
 namespace FerryLegacy
 {

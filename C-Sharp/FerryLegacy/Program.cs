@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FerryLegacy.domain;
 using FerryLegacy.DAO;
+using FerryLegacy.Service;
 
 namespace FerryLegacy
 {
