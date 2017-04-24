@@ -57,11 +57,11 @@
     <Compile Include="domain\Ferry.cs" />
     <Compile Include="domain\FerryJourney.cs" />
     <Compile Include="domain\Port.cs" />
+    <Compile Include="domain\PortModel.cs" />
     <Compile Include="domain\TimeTable.cs" />
     <Compile Include="domain\TimeTableEntry.cs" />
     <Compile Include="domain\TimeTableViewModelRow.cs" />
     <Compile Include="FerryModule.cs" />
-    <Compile Include="PortModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\FerryAvailabilityService.cs" />
